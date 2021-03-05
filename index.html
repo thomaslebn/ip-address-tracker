@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon.svg"
+    />
+
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__header">
+        <div class="title">
+          <h1>IP Address Tracker</h1>
+        </div>
+        <div class="section__input">
+          <form class="container__input">
+            <input
+              type="text"
+              class="input__ip"
+              id="input__ip"
+              placeholder="192.212.174.101 or google.com"
+            />
+            <button class="btn__submit" id="btn__submit" type="submit">
+              <img src="/images/icon-arrow.svg" alt="icon for search button" />
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="container__info">
+        <div class="infos">
+          <div class="info">
+            <h2 class="info__title">Ip Address</h2>
+            <p class="info__ip">192.212.174.101</p>
+          </div>
+          <div class="info">
+            <h2 class="info__title">Location</h2>
+            <p class="info__location">
+              California Rosemead <br />
+              US
+            </p>
+          </div>
+          <div class="info">
+            <h2 class="info__title">Timezone</h2>
+            <p class="info__timezone">UTC -8:00</p>
+          </div>
+          <div class="info last">
+            <h2 class="info__title">ISP</h2>
+            <p class="info__isp">
+              Southern California <br />
+              Edinson
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="mapid"></div>
+    </div>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
